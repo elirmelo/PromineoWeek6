@@ -15,6 +15,10 @@ public class Player
 	public Player()
 	{
 			score = 0;
+			Deck deck = new Deck();
+			for (int i=0; i < 51; i++) {
+				hand.add(i, deck.cards.get(i));
+			}
 			
 	}
 	
@@ -47,13 +51,8 @@ public class Player
 	//Flip Method
 	public Card flip() 
 	{
-		Deck deck = new Deck();
-		for (int i=0; i < deck.cards.size(); i++) {
-			hand.add(i, deck.cards.get(i));
-		}
 		
-		
-		hand.remove(hand.size());
+		hand.remove(hand.size()-1);
 
 		return hand.get(hand.size()-1);
 	}
@@ -62,7 +61,7 @@ public class Player
 	public void draw(Deck deck) 
 	{
 		deck = new Deck();
-		hand.add(hand.size()-1, deck.draw());
+		hand.add(deck.draw());
 	}
 	
 	//increment score method

@@ -26,11 +26,11 @@ public class Deck
 		String[] names = {"Diamonds", "Spades", "Clubs", "Hearts" };
 		
 		//Populate deck of cards 
-		for (int i=0; i < 52; i++) 
+		for (int i=0; i < 51; i++) 
 		{
 			cards.add(i, new Card( values[ i % 13 ], names[ i / 13 ] ));
 		}
-		for( int i=0; i < cards.size(); i++) {
+		/*for( int i=0; i < cards.size(); i++) {
 			System.out.print(cards.get(i));
 			if ( i % 4 == 0) {
 				System.out.println();
@@ -38,7 +38,7 @@ public class Deck
 			if ( i % 12 == 0 ) {
 				System.out.println();	
 			}
-		}
+		}*/
 
 		
 	}
