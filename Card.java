@@ -1,6 +1,7 @@
 
-public class Card {
-
+public class Card 
+{
+	//Fields
 	private int value;
 	private String name;
 
@@ -24,10 +25,18 @@ public class Card {
 		System.out.println( this.value + " of " + this.name);
 	}
 	
+	public String toString() {
+		return value + " of " + name + " - ";
+	}
+	
 	//Constructor
 	public Card (int value, String name) {
 		this.value = value;
 		this.name = name;
+	}
+	
+	public Card() {
+		
 	}
 	
 	
